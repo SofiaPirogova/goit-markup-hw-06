@@ -68,7 +68,7 @@
       <section class="banner">
         <div class="banner-center">
           <h1 class="tagline">Эффективные решения для вашего бизнеса</h1>
-          <a href="#" class="order link" data-modal-open>Заказать услугу</a>
+          <a href="#" class="order btn link" data-modal-open>Заказать услугу</a>
         </div>
       </section>
 
@@ -441,7 +441,7 @@
               placeholder="E-mail"
               id="mail-footer"
             />
-            <button class="footer-form-button" type="submit">
+            <button class="footer-form-button btn" type="submit">
               <span>Подписаться</span>
               <svg class="icon-footer-send-form">
                 <use
@@ -454,6 +454,7 @@
       </div>
     </footer>
     <!-- Модалка -->
+    <!-- is-hidden вернуть в бэкдроп -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-button" data-modal-close>
@@ -461,28 +462,44 @@
         </button>
         <!-- Форма в модалке -->
         <form class="modal-form">
-          <h4>Оставьте свои данные, мы вам перезвоним</h4>
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name" pattern="[а-я А-Я]{2,}" />
+          <h4 class="modal-header-text">
+            Оставьте свои данные, мы вам перезвоним
+          </h4>
+          <label class="label-modal block" for="name">Имя</label>
+          <input
+            class="input-modal block"
+            type="text"
+            name="name"
+            id="name"
+            pattern="[а-я А-Я]{2,}"
+          />
+          <label class="label-modal block" for="phone">Телефон</label>
+          <input class="input-modal block" type="tel" name="tel" id="phone" />
 
-          <label for="phone">Телефон</label>
-          <input type="tel" name="tel" id="phone" />
+          <label class="label-modal block" for="mail">Почта</label>
+          <input class="input-modal block" type="email" name="mail" id="mail" />
 
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" />
-
-          <label for="comment">Комментарий</label>
+          <label class="label-modal block" for="comment">Комментарий</label>
           <textarea
-            class="textarea-modal"
+            class="textarea-modal block"
             name="comment"
             id="comment"
             placeholder="Введите текст"
           ></textarea>
-
-          <input type="checkbox" name="checkbox" id="policy" />
-          <label for="policy">Соглашаюсь с рассылкой и принимаю</label>
-          <a href="#">Условия договора</a>
-          <button type="submit">Отправить</button>
+          <div class="block agree-form">
+            <input
+              class="checkbox"
+              type="checkbox"
+              name="checkbox"
+              id="policy"
+              value="accept"
+            />
+            <label class="checkbox-text label-agree" for="policy"
+              >Соглашаюсь с рассылкой и принимаю</label
+            >
+            <a class="checkbox-text agree" href="#">Условия договора</a>
+          </div>
+          <button class="button-modal btn" type="submit">Отправить</button>
         </form>
       </div>
     </div>
