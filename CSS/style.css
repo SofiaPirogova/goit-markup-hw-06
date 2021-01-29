@@ -734,6 +734,19 @@ body {
   border-color: var(--accent-color);
   outline: none;
 }
+.input-modal-wrapper {
+  position: relative;
+  display: block;
+}
+.icon-modal {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin: 11px 0px 11px 12px;
+}
+.input-modal-wrapper:focus-within {
+  --color3: var(--accent-color);
+}
 .modal-form {
   padding: 40px;
 }
@@ -783,6 +796,7 @@ body {
   color: var(--accent-color);
   margin-left: 4px;
 }
+
 .agree-form {
   display: flex;
   justify-content: center;

@@ -465,20 +465,42 @@
           <h4 class="modal-header-text">
             Оставьте свои данные, мы вам перезвоним
           </h4>
+          <!-- Имя -->
           <label class="label-modal block" for="name">Имя</label>
-          <input
-            class="input-modal block"
-            type="text"
-            name="name"
-            id="name"
-            pattern="[а-я А-Я]{2,}"
-          />
+          <span class="input-modal-wrapper" .>
+            <svg class="icon-modal">
+              <use href="./images/svg/sprite.svg#icon-modal-name"></use>
+            </svg>
+            <input
+              class="input-modal block"
+              type="text"
+              name="name"
+              id="name"
+              pattern="[а-я А-Я]{2,}"
+            />
+          </span>
+          <!-- Телефон -->
           <label class="label-modal block" for="phone">Телефон</label>
-          <input class="input-modal block" type="tel" name="tel" id="phone" />
-
+          <span class="input-modal-wrapper">
+            <svg class="icon-modal">
+              <use href="./images/svg/sprite.svg#icon-modal-phone"></use>
+            </svg>
+            <input class="input-modal block" type="tel" name="tel" id="phone" />
+          </span>
+          <!-- Почта -->
           <label class="label-modal block" for="mail">Почта</label>
-          <input class="input-modal block" type="email" name="mail" id="mail" />
-
+          <span class="input-modal-wrapper">
+            <svg class="icon-modal">
+              <use href="./images/svg/sprite.svg#icon-modal-email"></use>
+            </svg>
+            <input
+              class="input-modal block"
+              type="email"
+              name="mail"
+              id="mail"
+            />
+          </span>
+          <!-- Комментарии -->
           <label class="label-modal block" for="comment">Комментарий</label>
           <textarea
             class="textarea-modal block"
